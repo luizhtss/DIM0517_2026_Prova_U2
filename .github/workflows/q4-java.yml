@@ -1,5 +1,8 @@
 name: Java
 
+on:
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,3 +22,12 @@ jobs:
 
       - name: Build
         run: mvn -B compile
+
+      - name: Test
+        run: mvn test
+
+      - name: Docker build
+        run: docker build -t api-java .
+
+      - name: Docker run
+        run: docker run -d -p 8080:8080 api-java
