@@ -1,5 +1,17 @@
 name: Java
 
+
+on:
+  push:
+    branches:
+      - "feature/**"
+    paths:
+      - "java/pom.xml"
+      - "java/Dockerfile"
+      - "java/.dockerignore"
+      - "java/src/**"
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
