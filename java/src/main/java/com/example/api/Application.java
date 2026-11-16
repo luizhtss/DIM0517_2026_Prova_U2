@@ -21,7 +21,7 @@ public class Application {
     }
 
     @GetMapping("/itsme")
-    public Map<String, String> hello() {
+    public Map<String, String> itsme() {
         return Map.of("message", "Mario!");
     }
 
