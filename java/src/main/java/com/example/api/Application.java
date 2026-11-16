@@ -20,8 +20,14 @@ public class Application {
         return Map.of("message", "Hello, World!");
     }
 
+    @GetMapping("/itsme")
+    public Map<String, String> itsme() {
+        return Map.of("message", "Mario!");
+    }
+
     @GetMapping("/healthy")
     public Map<String, String> healthy() {
         return Map.of("status", "healthy");
     }
 }
+
